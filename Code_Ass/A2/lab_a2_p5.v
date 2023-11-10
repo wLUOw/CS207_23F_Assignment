@@ -3,7 +3,8 @@ module lab_a2_p5 (
     output [0:0] more1_somin, more1_pomax
 );
     
-assign more1_somin = a&b&d | a&b&c | b&c&d | a&c&d;
-assign more1_pomax = (a|b) & (a|c) & (a|d) & (b|c) & (b|d) & (c|d);
+assign more1_somin = a&b&c&d | a&b&~c&d | a&b&c&~d | ~a&b&c&d | a&~b&c&d;
+assign more1_pomax = (a|b|c|d) & (a|b|c|~d) & (a|b|~c|d) & (a|b|~c|~d) & (a|~b|c|d) & (a|~b|c|~d) & 
+                    (a|~b|~c|d) & (~a|b|c|d) & (~a|b|c|~d) & (~a|b|~c|d) & (~a|~b|c|d);
 
 endmodule

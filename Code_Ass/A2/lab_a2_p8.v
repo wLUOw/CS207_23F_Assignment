@@ -3,9 +3,7 @@ module lab_a2_p8 (
     output [0:0] more1
 );
 
-wire [0:0] w1, w2;
-MUX_8_1 m1(in[2:0], 8'b1110_1000, w1);
-MUX_8_1 m2(in[2:0], 8'b1000_0000, w2);
-assign more1 = in[3] & w1 | ~in[3] & w2;
+wire [7:0] x = in[3] ? 8'b1110_1000 : 8'b1000_0000;
+MUX_8_1 m1(in[2:0], x, more1);
 
 endmodule

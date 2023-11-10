@@ -1,9 +1,9 @@
-module lab2_a2_p1_sim();
+module lab_a2_p2();
 
 reg [2:0] a, b;
 wire sum_flag;
 wire [2:0] sum_absolut;
-lab2_a2_p1 u1(a, b, sum_flag, sum_absolut);
+lab_a2_p1 u1(a, b, sum_flag, sum_absolut);
 
 initial begin
     $monitor ("%d %d %d %d", a, b, sum_flag, sum_absolut);

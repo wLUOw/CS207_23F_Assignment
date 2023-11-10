@@ -1,4 +1,4 @@
-module lab_a2_p3_sim();
+module lab_a2_p4();
 
 reg [2:0] a, b;
 wire [0:0] tub_sflag_sel, tub_sabsolut_sel;
