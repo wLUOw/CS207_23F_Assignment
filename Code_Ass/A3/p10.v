@@ -10,7 +10,7 @@ module MemUnit16_8 (
 
     always @(posedge clk or negedge rst_n) begin
         if (rst_n == 0) begin
-            mem = 128'h00000000;
+            mem <= 128'h00000000;
         end
         else if (rw == 0) begin
             mem[addr*8+7] <= data_in[7];

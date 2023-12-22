@@ -14,14 +14,10 @@ module tb_T_FF_pos_rst_n();
     end
 
     initial fork
-        T = 1;
-        #3 T = 0;
-        #18 T = 1;
-        #33 T = 0;
-        #48 T = 1;
-        #63 T = 0;
-        #78 T = 1;
-        #93 T = 0;
+        T = 0;
+        forever begin
+            #15 T = ~T;
+        end
         #100 $finish;
     join
 
